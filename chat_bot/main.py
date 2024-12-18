@@ -20,6 +20,11 @@ async def root():
     return template_response("Hello World")
 
 
+@app.post("/")
+async def post(data: dict):
+    print("data", data)
+    return template_response("Return Messages")
+
 
 if __name__ == "__main__":
     import uvicorn
